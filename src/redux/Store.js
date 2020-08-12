@@ -1,7 +1,7 @@
 import { createStore } from "redux";
-import { contact, initialState } from "./reducer";
+import { contact, initialState } from "./Contact";
 
-export const store = () => {
-  const Store = createStore(contact, initialState);
-  return Store;
+export const Store = () => {
+  const store = createStore(contact, initialState);
+  return store;
 };

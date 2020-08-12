@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { CONTACT } from "../shared/contact";
 import {
   Button,
   CardText,
@@ -8,15 +7,16 @@ import {
   CardBody,
   CardSubtitle,
 } from "reactstrap";
+import ContactComponent from "./ContactComponent";
 
-function HomeComponent(props) {
-  console.log(props, " Hello");
-  const [contact, setstate] = useState(CONTACT);
+function HomeComponent({ contact }) {
+  console.log(contact, " Hello");
+  const [contacts, setstate] = useState(contact);
   const [contactSelected, setNewContact] = useState(null);
   const selectedContact = (contact) => {
     setNewContact(contact);
   };
-  const name = contact.map((contacts) => {
+  const name = contacts.map((contacts) => {
     return (
       <div onClick={() => selectedContact(contacts)} key={contacts.id}>
         {contacts.name}
@@ -40,7 +40,11 @@ function HomeComponent(props) {
 export default HomeComponent;
 
 function RenderContact(props) {
-  console.log(props.contact);
+  const renderContactComponent = () => {
+    console.log("I am Called");
+    return <ContactComponent />;
+  };
+
   if (props.contact != null) {
     return (
       <div>
@@ -90,7 +94,9 @@ function RenderContact(props) {
             </div>
           </CardBody>
         </Card>
-        <Button className="btn offset-5">Add New Contact</Button>
+        <Button className="offset-5" onClick={() => renderContactComponent}>
+          Add New Contact
+        </Button>
       </div>
     );
   } else {
