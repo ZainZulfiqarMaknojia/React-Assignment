@@ -1,0 +1,63 @@
+#row {
+  color: #184a45ff;
+}
+.Title {
+  text-align: center;
+  background-color: #184a45ff;
+  color: white;
+}
+.profilePic {
+  height: 50%;
+  width: 50%;
+}
+
+.navbar-dark {
+  background-color: #184a45ff;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+.btn {
+  text-align: center;
+  background-color: #184a45ff;
+  color: white;
+}
+.btn :hover {
+  background-color: white;
+  color: #184a45ff;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: white;
+}
+.ContactSection {
+  background-color: #b0b8b4ff;
+  height: 250%;
+}
+sidebar {
+  width: 20%;
+  background-color: white;
+  height: 100%;
+  overflow: scroll;
+}
+
+.sidebar div {
+  display: block;
+  color: #184a45ff;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar div.active {
+  background-color: #184a45ff;
+  color: white;
+}
+
+.sidebar div:hover:not(.active) {
+  background-color: #184a45ff;
+  color: white;
+}
+#Contact-Book {
+  background-color: #184a45ff;
+  color: white;
+}
