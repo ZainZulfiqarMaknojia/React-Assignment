@@ -10,13 +10,13 @@ import {
 import ContactComponent from "./ContactComponent";
 
 function HomeComponent({ contact }) {
-  console.log(contact, " Hello");
+  console.log(contact);
   const [contacts, setstate] = useState(contact);
   const [contactSelected, setNewContact] = useState(null);
   const selectedContact = (contact) => {
     setNewContact(contact);
   };
-  const name = contacts.map((contacts) => {
+  const name = contacts.contact.map((contacts) => {
     return (
       <div onClick={() => selectedContact(contacts)} key={contacts.id}>
         {contacts.name}
@@ -42,7 +42,7 @@ export default HomeComponent;
 function RenderContact(props) {
   const renderContactComponent = () => {
     console.log("I am Called");
-    return <ContactComponent />;
+    //return <ContactComponent />;
   };
 
   if (props.contact != null) {

@@ -1,13 +1,16 @@
 import React from "react";
 import Home from "./HomeComponent";
+import Contact from "./ContactComponent";
 import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
   return {
-    contact: state.contact,
+    contact: state.Contact,
   };
 };
 function MainComponent(props) {
-  return <Home contact={props.contact} />;
+  console.log(props.contact);
+  /*return <Home contact={props.contact} />;*/
+  return <Contact />;
 }
 export default connect(mapStateToProps)(MainComponent);
