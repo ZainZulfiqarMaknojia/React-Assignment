@@ -7,7 +7,6 @@ import {
   CardBody,
   CardSubtitle,
 } from "reactstrap";
-import ContactComponent from "./ContactComponent";
 import { Loading } from "./LoadingComponent";
 import { Link } from "react-router-dom";
 
@@ -57,11 +56,6 @@ function HomeComponent(props) {
 export default HomeComponent;
 
 function RenderContact(props) {
-  const renderContactComponent = () => {
-    console.log("I am Called");
-    //return <ContactComponent />;
-  };
-
   if (props.contact != null) {
     return (
       <div>

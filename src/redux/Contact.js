@@ -12,12 +12,13 @@ export const contact = (
       var contacts = action.payload;
       return { ...state, contact: state.contact.concat(contacts) };
     case ActionTypes.ADD_CONTACTS:
-      console.log("I am Called", action.payload);
+      var Contact = action.payload;
+      Contact.id = state.length;
       return {
         ...state,
         isLoading: false,
         errMess: null,
-        contact: action.payload,
+        contact: Contact,
       };
 
     case ActionTypes.CONTACT_LOADING:

@@ -16,19 +16,24 @@ const minLength = (len) => (val) => val && val.length >= len;
 const maxLength = (len) => (val) => !val || val.length < len;
 const isCharacter = (val) => /^[A-Za-z ]+$/i.test(val);
 const isCorrectNumber = (val) => /^[(\][0-9]{3}[)\][0-9]{9}$/i.test(val);
-
+const maxSize = (val) => val && val.length;
 function ContactComponent(props) {
   console.log(props);
   const [image, setImage] = useState(profilePic);
 
   const imageHandler = (e) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      if (reader.readyState === 2) {
-        setImage(reader.result);
-      }
-    };
-    reader.readAsDataURL(e.target.files[0]);
+    if (e.target.files[0].size <= 200000) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (reader.readyState === 2) {
+          setImage(reader.result);
+        }
+      };
+      reader.readAsDataURL(e.target.files[0]);
+      console.log(e.target.files[0]);
+    } else {
+      alert("Image Size Must Be Less Than Or Equals To 200kb");
+    }
   };
   const handleSubmit = (value) => {
     props.postContact(
@@ -206,7 +211,7 @@ function ContactComponent(props) {
                           name="image"
                           placeholder="Add Image"
                           onChange={imageHandler}
-                          validators={{}}
+                          validators={{ maxSize }}
                         />
                       </Col>
                     </Row>
