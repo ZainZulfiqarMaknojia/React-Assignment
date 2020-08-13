@@ -40,8 +40,8 @@ function ContactComponent(props) {
       ""
     );
     console.log(JSON.stringify(value));
-    alert(value);
-    //props.resetContactForm();
+    alert(JSON.stringify(value));
+    props.resetContactForm();
   };
 
   return (

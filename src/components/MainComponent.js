@@ -3,6 +3,9 @@ import Home from "./HomeComponent";
 import Contact from "./ContactComponent";
 import { postContact, fetchContact } from "../redux/ActionCreaters";
 import { connect } from "react-redux";
+import { Switch, Route, Redirect } from "react-router-dom";
+import Header from "./HeaderComponent";
+import { actions } from "react-redux-form";
 
 const mapStateToProps = (state) => {
   console.log("State: ", state.Contact);
@@ -16,6 +19,9 @@ const mapDispatchToProps = (dispatch) => ({
   fetchContact: () => {
     dispatch(fetchContact());
   },
+  resetContactForm: () => {
+    dispatch(actions.reset("contact"));
+  },
 });
 function MainComponent(props) {
   console.log(props.contact.contact, "hello");
@@ -23,12 +29,38 @@ function MainComponent(props) {
     props.fetchContact();
   }, []);
   return (
-    <Home
+    /*<Home
       contact={props.contact}
       contactLoading={props.contact.isLoading}
       contactErrMess={props.contact.errMess}
     />
+  );*/
+    /*return <Contact postContact={props.postContact} />;*/
+    <div>
+      <Header />
+      <Switch>
+        <Route
+          path="/home"
+          component={() => (
+            <Home
+              contact={props.contact}
+              contactLoading={props.contact.isLoading}
+              contactErrMess={props.contact.errMess}
+            />
+          )}
+        />
+        <Route
+          path="/contact"
+          component={() => (
+            <Contact
+              postContact={props.postContact}
+              resetContactForm={props.resetContactForm}
+            />
+          )}
+        />
+        <Redirect to="/home" />
+      </Switch>
+    </div>
   );
-  /*return <Contact postContact={props.postContact} />;*/
 }
 export default connect(mapStateToProps, mapDispatchToProps)(MainComponent);

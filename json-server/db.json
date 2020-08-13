@@ -44,6 +44,33 @@
       "shortBio": "University Friend",
       "image": "",
       "id": 4
+    },
+    {
+      "name": "Faiz",
+      "phoneNumber": "(401)4567895",
+      "address": "ABC Road Xyz Street",
+      "gender": "Male",
+      "shortBio": "Society Friend",
+      "image": "",
+      "id": 5
+    },
+    {
+      "name": "Ali Zain",
+      "phoneNumber": "(405)3214567",
+      "address": "Shahrah - e- Pakistan",
+      "gender": "Male",
+      "shortBio": "University Friend",
+      "image": "",
+      "id": 6
+    },
+    {
+      "name": "Saif Ali",
+      "phoneNumber": "(401)4567895",
+      "address": "ABC Road Xyz Street",
+      "gender": "Male",
+      "shortBio": "University Friend",
+      "image": "",
+      "id": 7
     }
   ]
 }

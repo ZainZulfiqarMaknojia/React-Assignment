@@ -9,6 +9,7 @@ import {
 } from "reactstrap";
 import ContactComponent from "./ContactComponent";
 import { Loading } from "./LoadingComponent";
+import { Link } from "react-router-dom";
 
 function HomeComponent(props) {
   const [contactSelected, setNewContact] = useState(null);
@@ -110,8 +111,10 @@ function RenderContact(props) {
             </div>
           </CardBody>
         </Card>
-        <Button className="offset-5" onClick={() => renderContactComponent}>
-          Add New Contact
+        <Button className="btn offset-5">
+          <Link to="/contact" id="Contact-Button">
+            Add New Contact
+          </Link>
         </Button>
       </div>
     );
