@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Zain Zulfiqar",
+    "phoneNumber": "(301)0000001",
+    "address": "ABC road XYZ street Karachi,Pakistan",
+    "gender": "Male",
+    "shortBio": "This is My Number",
+    "image": ""
+  },
+  {
+    "name": "Arman Nizar",
+    "phoneNumber": "(301)0102301",
+    "address": "Flat No 4 ABC street Karachi,Pakistan",
+    "gender": "Male",
+    "shortBio": "Arman (University) Friend Number",
+    "image": ""
+  },
+  {
+    "name": "Aazmeer Mubarak",
+    "phoneNumber": "(301)4637401",
+    "address": "ABC street Lahore,Pakistan",
+    "gender": "Male",
+    "shortBio": "Aazmeer (Relative) Number",
+    "image": ""
+  },
+  {
+    "name": "AliShah Naushad",
+    "phoneNumber": "(301)7563421",
+    "address": "Flat No 3 Shahrah e Faisal Karachi,Pakistan",
+    "gender": "Male",
+    "shortBio": "AliShah (Classmate) Number",
+    "image": ""
+  },
+  {
+    "name": "Ovaiz",
+    "phoneNumber": "(301)1234567",
+    "address": " Scheme 33 Karachi",
+    "gender": "Male",
+    "shortBio": "University Friend",
+    "image": ""
+  },
+  {
+    "name": "Faiz",
+    "phoneNumber": "(401)4567895",
+    "address": "ABC Road Xyz Street",
+    "gender": "Male",
+    "shortBio": "Society Friend",
+    "image": ""
+  },
+  {
+    "name": "Ali Zain",
+    "phoneNumber": "(405)3214567",
+    "address": "Shahrah - e- Pakistan",
+    "gender": "Male",
+    "shortBio": "University Friend",
+    "image": ""
+  },
+  {
+    "name": "Saif Ali",
+    "phoneNumber": "(401)4567895",
+    "address": "ABC Road Xyz Street",
+    "gender": "Male",
+    "shortBio": "University Friend",
+    "image": ""
+  },
+  {
+    "name": "Rahim",
+    "phoneNumber": "(301)0000000",
+    "address": "North Nazimabad",
+    "gender": "Male",
+    "shortBio": "fggdgfgfrerewr",
+    "image": ""
+  },
+  {
+    "name": "Hussain",
+    "phoneNumber": "(401)4567895",
+    "address": "Gulberg",
+    "gender": "Male",
+    "shortBio": "Friend Number",
+    "image": ""
+  },
+  {
+    "name": "Shahzaib",
+    "phoneNumber": "123456789101",
+    "address": "Gulistan e Jauhar",
+    "gender": "Male",
+    "shortBio": "Friend Number",
+    "image": ""
+  }
+]
