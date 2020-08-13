@@ -17,7 +17,8 @@ const maxLength = (len) => (val) => !val || val.length < len;
 const isCharacter = (val) => /^[A-Za-z ]+$/i.test(val);
 const isCorrectNumber = (val) => /^[(\][0-9]{3}[)\][0-9]{9}$/i.test(val);
 
-function ContactComponent() {
+function ContactComponent(props) {
+  console.log(props);
   const [image, setImage] = useState(profilePic);
 
   const imageHandler = (e) => {
@@ -30,15 +31,15 @@ function ContactComponent() {
     reader.readAsDataURL(e.target.files[0]);
   };
   const handleSubmit = (value) => {
-    /*props.postContact(
+    props.postContact(
       value.name,
       value.phoneNumber,
       value.address,
       value.gender,
       value.shortBio,
       ""
-    );*/
-    console.log(value.name);
+    );
+    console.log(JSON.stringify(value));
     alert(value);
     //props.resetContactForm();
   };

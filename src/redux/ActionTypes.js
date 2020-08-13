@@ -1,0 +1,4 @@
+export const ADD_CONTACT = "ADD_CONTACT";
+export const ADD_CONTACTS = "ADD_CONTACTS";
+export const CONTACT_LOADING = "CONTACT_LOADING";
+export const CONTACT_FAILED = "CONTACT_FAILED";

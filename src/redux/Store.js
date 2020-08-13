@@ -1,5 +1,7 @@
-import { createStore, combineReducers } from "redux";
-import { contact, initialState } from "./Contact";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import { contact } from "./Contact";
+import thunk from "redux-thunk";
+import logger from "redux-logger";
 import { createForms } from "react-redux-form";
 const initialContact = {
   name: "",
@@ -17,7 +19,8 @@ export const Store = () => {
       ...createForms({
         contact: initialContact,
       }),
-    })
+    }),
+    applyMiddleware(thunk, logger)
   );
 
   return store;

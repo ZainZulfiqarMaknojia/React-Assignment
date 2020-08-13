@@ -8,34 +8,50 @@ import {
   CardSubtitle,
 } from "reactstrap";
 import ContactComponent from "./ContactComponent";
+import { Loading } from "./LoadingComponent";
 
-function HomeComponent({ contact }) {
-  console.log(contact);
-  const [contacts, setstate] = useState(contact);
+function HomeComponent(props) {
   const [contactSelected, setNewContact] = useState(null);
   const selectedContact = (contact) => {
     setNewContact(contact);
   };
-  const name = contacts.contact.map((contacts) => {
+  const name = props.contact.contact.map((contacts) => {
     return (
       <div onClick={() => selectedContact(contacts)} key={contacts.id}>
         {contacts.name}
       </div>
     );
   });
-  return (
-    <div className="row">
-      <div className="col-12 col-sm-3">
-        <div className="sidebar">
-          <div id="Contact-Book">Phone Book</div>
-          {name}
+  if (props.contact.isLoading) {
+    return (
+      <div className="container">
+        <div className="row">
+          <Loading />
         </div>
       </div>
-      <div className="col-12 col-sm-8">
-        <RenderContact contact={contactSelected} />
+    );
+  } else if (props.contact.errMess) {
+    return (
+      <div className="container">
+        <div className="row">
+          <h4>{props.contact.errMess}</h4>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else if (props.contact.contact != null)
+    return (
+      <div className="row">
+        <div className="col-12 col-sm-3">
+          <div className="sidebar">
+            <div id="Contact-Book">Phone Book</div>
+            {name}
+          </div>
+        </div>
+        <div className="col-12 col-sm-8">
+          <RenderContact contact={contactSelected} />
+        </div>
+      </div>
+    );
 }
 export default HomeComponent;
 
