@@ -5,6 +5,7 @@ import { postContact, fetchContact } from "../redux/ActionCreaters";
 import { connect } from "react-redux";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Header from "./HeaderComponent";
+import Footer from "./FooterComponent";
 import { actions } from "react-redux-form";
 
 const mapStateToProps = (state) => {
@@ -60,6 +61,7 @@ function MainComponent(props) {
         />
         <Redirect to="/home" />
       </Switch>
+      <Footer />
     </div>
   );
 }

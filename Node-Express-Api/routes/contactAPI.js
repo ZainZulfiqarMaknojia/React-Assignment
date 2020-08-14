@@ -7,7 +7,9 @@ var jsonFile = fs.readFileSync(
 );
 var jsonFileAfterParse = JSON.parse(jsonFile);
 router.get("/", function (req, res, error) {
-  res.json(contact);
+  setTimeout(function () {
+    res.json(contact);
+  }, 2000);
 });
 router.post("/", function (req, res, next) {
   contact = contact.concat(req.body);

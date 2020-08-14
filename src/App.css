@@ -39,14 +39,11 @@
 .navbar-dark .navbar-nav .nav-link.active {
   color: white;
 }
-.ContactSection {
-  background-color: #b0b8b4ff;
-  height: 250%;
-}
+
 .sidebar {
   width: 100%;
   background-color: white;
-  height: 75%;
+  height: 90%;
   overflow-y: scroll;
 }
 
@@ -69,4 +66,16 @@
 #Contact-Book {
   background-color: #184a45ff;
   color: white;
+}
+.footer {
+  background-color: #184a45ff;
+  margin: 0px auto;
+  padding: 20px 0px 20px 0px;
+  min-height: 150px;
+}
+#linkColor {
+  color: white;
+}
+#loadingSpinner {
+  color: #184a45ff;
 }
