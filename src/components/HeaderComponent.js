@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { Navbar, Nav, NavbarToggler, Collapse, NavItem } from "reactstrap";
 import { NavLink } from "react-router-dom";
+
 function HeaderComponent() {
   const toogleNav = () => {
     handleNav(!isNavOpen);

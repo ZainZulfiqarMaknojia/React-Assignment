@@ -6,9 +6,11 @@ import {
   CardHeader,
   CardBody,
   CardSubtitle,
+  Media,
 } from "reactstrap";
 import { Loading } from "./LoadingComponent";
 import { Link } from "react-router-dom";
+import { baseUrlImage } from "../shared/baseUrl";
 
 function HomeComponent(props) {
   const [contactSelected, setNewContact] = useState(null);
@@ -63,7 +65,18 @@ function RenderContact(props) {
           <CardHeader className="Title">Contact Details</CardHeader>
           <CardBody>
             <div className="row">
-              <div className="col-12 col-sm-3"></div>
+              <div className="col-12 col-sm-3">
+                <Media>
+                  <Media left>
+                    <Media
+                      src={baseUrlImage + props.contact.image}
+                      alt="Contact Image"
+                      rounded="true"
+                      className="profileImage"
+                    />
+                  </Media>
+                </Media>
+              </div>
               <div className="col-12 col-sm-7">
                 <div className="row">
                   <div className="col-12 col-sm-2">

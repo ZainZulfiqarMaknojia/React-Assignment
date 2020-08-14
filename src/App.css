@@ -10,6 +10,10 @@
   height: 50%;
   width: 50%;
 }
+.profileImage {
+  height: 100%;
+  width: 100%;
+}
 
 .navbar-dark {
   background-color: #184a45ff;
@@ -39,11 +43,11 @@
   background-color: #b0b8b4ff;
   height: 250%;
 }
-sidebar {
-  width: 20%;
+.sidebar {
+  width: 100%;
   background-color: white;
-  height: 100%;
-  overflow: scroll;
+  height: 75%;
+  overflow-y: scroll;
 }
 
 .sidebar div {
